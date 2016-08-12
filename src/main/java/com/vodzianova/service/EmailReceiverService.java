@@ -117,7 +117,7 @@ public class EmailReceiverService {
                                 // this part is attachment
                                 String fileName = part.getFileName();
                                 attachFiles += fileName + ", ";
-                                part.saveFile(saveDirectory + File.separator);
+                                part.saveFile(saveDirectory + File.separator + fileName);
                             } else {
                                 // this part may be the message content
                                 messageContent = part.getContent().toString();
